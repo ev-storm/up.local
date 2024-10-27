@@ -1,0 +1,98 @@
+header{
+	display: flex;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: fit-content;
+	padding: 1% 5%;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 2000px;
+	z-index: 9999;
+}
+
+.logo svg{
+	width: 20vh;
+}
+
+.logo svg path{
+	fill: var(--dark_blue);
+	transition: var(--duration);
+}
+.logo svg:hover path{
+	fill: var(--blue);
+	transition: var(--duration);
+}
+.logo svg, .menu-item, .menu-item svg {
+	cursor: pointer;
+}
+.menu{
+	display: flex;
+	align-items: center;
+	width: 70%;
+	justify-content: end;
+	gap: 4%;
+	flex-wrap: wrap;
+}
+.menu-contacts{
+	display: flex;
+	align-items: center;
+}
+.menu-contacts {
+	width: 20%;
+	gap: 15%;
+	display: flex;
+	justify-content: end;
+	padding: 1%;
+}
+.menu-item{
+	color: var(--dark_blue);
+	font-weight: 300;
+	font-size: var(--h2);
+}
+.menu-item.active ~.under-menu-item{
+	width: 100%;
+	transition: var(--duration);
+}
+
+.under-menu-item{
+	display: flex;
+	justify-content: center;
+	width: 0;
+	height: 1px;
+	background-color: var(--dark_blue);
+	transition: var(--duration);
+}
+.menu div:hover .under-menu-item{
+	width: 100%;
+	transition: var(--duration);
+}
+.menu-item svg path{
+	fill: var(--blue);
+	transition: var(--duration);
+}
+.menu-item svg:hover path{
+	fill: var(--dark_blue);
+	transition: var(--duration);
+}
+
+footer{
+	display: flex;
+	position: fixed;
+	top: 96%;
+	width: 100%;
+	justify-content: start;
+	align-items: center;
+	padding: 0 2%;
+	z-index: 999;
+	height: 4%;
+}
+footer h2{
+	color: var(--gray);
+	font-size: var(--h3);
+	font-weight: 300;
+}
+footer h2 span{
+	font-weight: 400;
+}
+

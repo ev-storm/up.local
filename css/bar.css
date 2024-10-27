@@ -1,0 +1,184 @@
+.menu-bar-con{
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 18%;
+	min-width: 300px;
+	height: 100vh;
+	background-color: #ffffff00;
+	backdrop-filter: blur(0px);
+	z-index: 99;
+	align-items: start;
+	justify-content: end;
+	padding: 2%;
+	transition: all 0.5s ease-out; 
+	transform: translateX(-70%);
+}
+.menu-bar-con:hover{
+	transform: translateX(0);
+	background-color: #f3f3f370;
+	backdrop-filter: blur(10px);
+	transition: all 0.5s ease-out; 
+}
+
+.menu-bar-con:hover ul {
+	transform: translateX(0);
+	transition: all 0.5s ease-in-out;
+}
+
+.menu-bar-con ul{
+	margin-bottom:60%;
+	transform: translateX(-50%);
+	transition: all 0.5s ease-in-out;
+} 
+
+.bar-item h1{
+	color: var(--dark_blue);
+	font-size: var(--h2);
+	font-weight: 400;
+	cursor: pointer;
+}
+.bar-item{
+	transition: var(--duration);
+	margin-bottom: 2%;
+}
+
+.bar-item:hover {
+  color: var(--blue);
+	transition: var(--duration);
+}
+.bar-item.active h1{
+	color: var(--blue);
+	transition: var(--duration);
+	font-weight: 400;
+}
+
+.call-back{
+	transform: translateX(-50%);
+	transition: all 0.5s ease-in-out; 
+	margin-bottom: 20%;
+}
+.menu-bar-con:hover .call-back {
+	transform: translateX(0);
+	transition: all 0.5s ease-in-out; 
+}
+
+.call-back h1{
+	color: var(--dark_blue);
+	font-size: var(--h2);
+	font-weight: 500;
+}
+.call-back h2{
+	color: var(--blue);
+	font-weight: 400;
+	font-size: var(--h3);
+}
+.call-back form{
+	margin-top: 20px;
+}
+.call-back form input{
+	background-color: transparent;
+	border-style: solid;
+	border-radius: 0.3em;
+	border-width: 0.1px;
+	border-color: var(--dark_blue);
+	font-size: var(--h2);
+	color: var(--dark_blue);
+	width: 100%;
+	margin-bottom: 5px;
+	font-weight: 300;
+	padding: 2%;
+}
+
+.call-back form input:focus {
+	border-width: 2px;
+	outline: none !important;
+}
+.call-back form input::placeholder{
+	font-family: "Montserrat", sans-serif;
+	color: var(--dark_blue);
+	font-weight: 200;
+	width: 100%;
+	font-size: var(--h3);
+	padding: 2%;
+}
+.call-back form button{
+	width: 100%;
+	background-color: var(--blue);
+	font-size: var(--h3);
+	color: #ffffff;
+}
+.call-back form button:hover{
+	background-color: var(--dark_blue);
+}
+
+/* under-menu */
+.under-menu h2{
+	color: var(--dark_blue);
+	font-weight: 400;
+	cursor: pointer;
+	font-size: var(--h3);
+	margin-left: 4vh;
+}
+.under-menu.active h2{
+	transition: var(--duration);
+	color: var(--blue);
+	font-weight: 500;
+}
+.under-menu:hover h2{
+	transition: var(--duration);
+	color: var(--blue);
+	font-weight: 500;
+}
+
+
+
+/* menu-bar */
+.undermenu-bar {
+	display: none;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+.menu-bar.active > .undermenu-bar {
+	display: block;
+	animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+	from {
+			opacity: 0;
+			transform: translateY(-10px); /* Сдвиг вверх для эффекта */
+	}
+	to {
+			opacity: 1;
+			transform: translateY(0);
+	}
+}
+
+.menu-bar {
+	list-style-type: none;
+}
+.menu-bar h1{
+	color: var(--dark_blue);
+	font-weight: 400;
+	cursor: pointer;
+	font-size: var(--h3);
+	transition: var(--duration);
+}
+.menu-bar h1:hover{
+	color: var(--blue);
+	font-weight: 400;
+	cursor: pointer;
+	font-size: var(--h3);
+	transition: var(--duration);
+}
+.menu-bar.active h1{
+	color: var(--blue);
+	font-weight: 400;
+	cursor: pointer;
+	font-size: var(--h3);
+	transition: var(--duration);
+}

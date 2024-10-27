@@ -1,0 +1,84 @@
+@import url('header.css');
+@import url('font.css');
+@import url('bar.css');
+@import url('content.css');
+@import url('nav.css');
+@import url('about.css');
+@import url('cont.css');
+@import url('prodaction.css');
+
+
+
+:root {
+	--black: #222222;
+	--gray:#808080;
+	--light_gray:#f3f3f3;
+	--blue: #337AB7;
+	--dark_blue: #00487F;
+	--duration: all 0.5s ease;
+	--h11: 4vh;
+	--h1: 3vh;
+	--h2: 2vh;
+	--h3: 1.5vh;
+}
+body{
+	background-color: var(--light_gray);
+}
+
+*{
+	cursor: auto;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+li {
+  list-style-type: none;
+	cursor: pointer;
+}
+h1, h2, h3, span, a{
+	font-family: "Montserrat";
+	font-weight: 300;
+	font-size: var(--h3);
+	color: var(--main_black);
+	text-decoration: none;
+	line-height: 1.5;
+}
+
+.button{
+	font-family: "Montserrat";
+	font-weight: 400;
+	font-size: var(--h2);
+	color: #ffffff;
+	background-color: var(--blue);
+	border-style: none;
+	border-radius: 0.4em;
+	padding: 5px 20px;
+	transition: var(--duration);
+	cursor: pointer;
+	letter-spacing: 0.5px;
+}
+.button:hover{
+	background-color: var(--dark_blue);
+}
+.container{
+	display: flex;
+	height: 100vh;
+	align-items: end;
+}
+.swiper {
+	width: 100%;
+	height: 87%;
+	margin-bottom: 2%;
+}
+.swiper-slide {
+	display: flex!important;
+	justify-content: center!important;
+	align-items: center!important;
+	padding: 0 5%;
+	background-color: #ffffff;
+	border-radius: 0.5em;
+}
+.swiper-pagination-vertical.swiper-pagination-bullets,.swiper-vertical>.swiper-pagination-bullets {
+	left: var(--swiper-pagination-right,8px) !important;
+	right: var(--swiper-pagination-left,auto)!important;
+}
