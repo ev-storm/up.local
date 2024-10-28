@@ -3,20 +3,25 @@
 				<li class="bar-item active" data-slide="0" value="Специализация">
 					<h1>Специализация</h1>
 				</li>
-
-				<li class="bar-item" data-slide="1"  value="юридическая информация">
-					<h1>Юр. информация</h1>
+				<li class="bar-item" data-slide="1" value="Наши преимущества">
+					<h1>Наши преимущества</h1>
 				</li>
 
-				<li class="bar-item" data-slide="2" value="Сертификат качества">
-					<h1>Сертификат качества</h1>
-				</li>
-
-				<li class="bar-item" data-slide="3" value="оборудование">
+				<li class="bar-item" data-slide="2" value="Оборудование">
 					<h1>Оборудование</h1>
 				</li>
 
-				<li class="bar-item" data-slide="4" value="услуги">
+				<li class="bar-item" data-slide="3"  value="Юридическая информация">
+					<h1>Юр. информация</h1>
+				</li>
+
+				<li class="bar-item" data-slide="4" value="Сертификат качества">
+					<h1>Сертификат качества</h1>
+				</li>
+
+
+
+				<li class="bar-item" data-slide="5" value="услуги">
 					<h1>Услуги</h1>
 				</li>
 

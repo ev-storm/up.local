@@ -6,6 +6,8 @@
 @import url('about.css');
 @import url('cont.css');
 @import url('prodaction.css');
+@import url('media.css');
+
 
 
 
@@ -52,7 +54,7 @@ h1, h2, h3, span, a{
 	background-color: var(--blue);
 	border-style: none;
 	border-radius: 0.4em;
-	padding: 5px 20px;
+	padding: 0.7vh 2.5vh;
 	transition: var(--duration);
 	cursor: pointer;
 	letter-spacing: 0.5px;
@@ -71,14 +73,73 @@ h1, h2, h3, span, a{
 	margin-bottom: 2%;
 }
 .swiper-slide {
-	display: flex!important;
+	display: flex;
 	justify-content: center!important;
 	align-items: center!important;
 	padding: 0 5%;
 	background-color: #ffffff;
 	border-radius: 0.5em;
 }
+
 .swiper-pagination-vertical.swiper-pagination-bullets,.swiper-vertical>.swiper-pagination-bullets {
 	left: var(--swiper-pagination-right,8px) !important;
 	right: var(--swiper-pagination-left,auto)!important;
 }
+.swiper-pagination-bullets {
+	color: var(--blue)!important;
+}
+.swiper-button-next,.swiper-button-prev {
+	position: absolute;
+	top: var(--swiper-navigation-top-offset,50%);
+	width: calc(var(--swiper-navigation-size)/ 44 * 27);
+	height: var(--swiper-navigation-size);
+	margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+	z-index: 10;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--blue)!important;
+}
+
+@keyframes fadeIn {
+	from {
+			opacity: 0; 
+			transform: translateX(-20px);
+			transition: var(--duration);
+	}
+	to {
+			opacity: 1; 
+			transform: translateX(0px);
+			transition: var(--duration);
+	}
+}
+@keyframes fadeIn-sert {
+	from {
+			opacity: 0; 
+			transform: translateY(-20px); 
+	}
+	to {
+			opacity: 1; 
+			transform: translateY(0); 
+	}
+}
+@keyframes fadeInBack {
+	from {
+			opacity: 0; 
+	}
+	to {
+			opacity: 1; 
+	}
+}
+
+/* @keyframes fadeIn {
+	from {
+			opacity: 0;
+			transform: translateY(-10px); 
+	}
+	to {
+			opacity: 1;
+			transform: translateY(0);
+	}
+} */

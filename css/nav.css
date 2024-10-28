@@ -7,8 +7,10 @@ header{
 	padding: 1% 5%;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 2000px;
 	z-index: 9999;
+}
+.logo{
+	z-index:9999 ;
 }
 
 .logo svg{
@@ -95,4 +97,11 @@ footer h2{
 footer h2 span{
 	font-weight: 400;
 }
+.burger{
+	display: none;
+}
+.burger-close{
+	display: none;
+}
+
 

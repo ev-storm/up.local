@@ -75,6 +75,10 @@
 			</svg>
 		</a>
 
+		<img class="burger-close" src="/assets/icons/close.svg" alt="">
+		<img class="burger" src="/assets/icons/burg.svg" alt="">
+
+
 	<nav class="menu">
 		<div>
 			<a class="menu-item menu-btn-about" href="index.php">о компании</a>

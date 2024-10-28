@@ -4,21 +4,20 @@
 	position: fixed;
 	top: 0;
 	right: 0;
-	align-items: center;
 	justify-content: end;
-	width: 87%;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	margin: 0;
 }
 .content{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	width: 100%;
+	justify-content: space-around;
 	height: 87%;
-	margin-bottom: 2%;
+	width: 100%;
 	background-color: #ffffff;
-	padding: 1vw 2vw;
+	margin-bottom: 2%;
+	padding: 2% 4%;
 }
 /* ----------------navigation---------------*/
 .navigation{
@@ -44,18 +43,26 @@
 	flex-wrap: wrap;
 }
 .categories{
-	transition: all 0.2s ease;
+	transition: var(--duration);
+	background-color: var(--dark_blue)!important;
+	font-size: var(--h3)!important;
+	border-radius: 0.5em;
+	
 }
 .categories.active{
 	color: #ffffff;
-	background-color: var(--blue);
+	background-color: var(--blue)!important;
 	border-color: var(--blue);
 	box-shadow: 0 0.2vw 0.8vw #2222224f;
 }
 /* -------------main-content--------------------- */
 .main-content{
 	display: flex;
-	height: 60%;
+	height: 70%;
+}
+.segment-swiper{
+	height: 100%!important;
+	display: flex;
 }
 .main-content_text{
 	display: flex;
@@ -65,7 +72,7 @@
 }
 .main-content_text h1{
 	font-size: var(--h1);
-	font-weight: 600;
+	font-weight: 500;
 	color: var(--dark_blue);
 }
 .main-content_text h2{
@@ -74,17 +81,17 @@
 	color: var(--blue);
 }
 .main-content_text p{
+	font-family: "Montserrat";
+	font-weight: 300;
 	font-size: var(--h2);
-	font-weight: 500;
-	color: #595959;
+	color: var(--gray);
 	margin: 1vw 0;
 }
 .main-content_podsegment{
-	width: 69%;
+	width: 75%;
 	height: auto;
 	background-color: #b6b6b620;
 	border-radius: 1vw;
-	
 }
 .text-categories {
 	opacity: 0;
@@ -116,6 +123,10 @@
 	flex-wrap: wrap;
 	margin-top: 2vw;
 }
+.buttons-slide.show{
+	font-size: var(--h3);
+}
+
 /* ---------------segment------------------ */
 .segment-btn_con{
 	display: flex;
@@ -129,10 +140,10 @@
 	justify-content: end;
 	align-items: center;
 	margin-top: 2vw;
-	width: 7.7vw;
-	height: 7vw;
+	width: 6.7vw;
+	height: 6vw;
 	background-color: var(--blue);
-	border-radius: 1vw;
+	border-radius: 0.6vw;
 	z-index: 1;
 	cursor: pointer;
 }
@@ -141,69 +152,80 @@
 	flex-direction: column;
 	justify-content: end;
 	align-items: center;
-	margin-top: -7vw;
-	width: 7.7vw;
-	height: 7vw;
+	margin-top: -6vw;
+	width: 6.7vw;
+	height: 6vw;
 	background-color: #ffffff;
 	border-style: solid;
-	border-radius: 1vw;
-	border-width: 0.2vw;
+	border-radius: 0.6vw;
+	border-width: 2px;
 	border-color: var(--blue);
 	z-index: 2;
 	transition: var(--duration);
 	cursor: pointer;
 }
 .segment-btn:hover .segment{
-	margin-top: -9.5vw;
+	margin-top: -8vw;
 	transition: var(--duration)
 }
 .segment.active{
-	margin-top: -9.5vw;
+	margin-top: -8vw;
+}
+.segment.active >.segment-cover{
+	height: 2vw;
 }
 
+
 .segment-btn:hover .low{
-	margin-top: -8.5vw;
+	margin-top: -7.5vw;
 	transition: var(--duration)
 }
 .low.active{
-	margin-top: -8.5vw;
+	margin-top: -7.5vw;
 }
 
 
 .segment-btn h2{
-	font-weight: 500;
+	font-weight: 400;
 	color: #ffffff;
-	font-size: var(--h22);
+	font-size: 0.7vw;
 	padding: 0.5vw;
 	cursor: pointer;
 	text-align: center;
+	line-height: 1.1;
 }
-.segment img{
-	width: 6.7vw;
+.segment img{	
+	width: 5.7vw;
 	cursor: pointer;
 }
 
 /* ------------swiper-------------- */
-.swiper {
-	width: 100%;
-	height: 100%;
-}
-.swiper-slide {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
-.segment-slide {
-	padding: 3vw 5vw;
-	display: flex;
+
+
+.segment-slide{
+	display: none!important;
+	background-color: var(--light_gray)!important;
+	margin: 0;
+	height: 100%;
+	align-items: start;
+	justify-content: start;
+	padding: 0 15%;
 }
 .segment-slide .text{
-	width: 70%;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 70%;
+}
+.segment-slide.show{
+	display: flex !important;
+	margin: 0;
+	height: 100%;
 }
 .segment-slide .text h1{
 	font-size: var(--h1);
-	font-weight: 600;
+	font-weight: 500;
 	color: var(--dark_blue);
 }
 .segment-slide .text h2{
@@ -213,149 +235,47 @@
 	color: var(--blue);
 }
 .segment-slide img{
-	position: absolute;
-	right: 10%;
-	bottom: 10%;
-	width: 25vw;
+	/* position: absolute;
+	right: 15%;
+	bottom: 10%; */
+	height: 90%;
 }
 
-.segment-slide{
+
+/* ------------------- КНОПКИ КАТЕГОРИЙ ----------------------- */
+
+.btn-slide {
 	display: none;
-}
-.segment-slide.active{
-	display: block;
+	opacity: 0; 
+	animation: fadeIn 0.5s forwards; 
+	transition: var(--duration);
 }
 
+.btn-slide.show {
+	display: block; 
+	background-color: #ffffff;
+	color: var(--blue);
+	border-style: solid;
+	border-width: 0.25vh;
+	border-color: var(--blue);
+	transition: var(--duration);
+	font-size: var(--h3);
+	border-radius: 0.5em;
+}
+.btn-slide:hover{
+	background-color: var(--blue)!important;
+	color: #ffffff;
+	border-color: var(--blue);
+	box-shadow: 0 0.2vw 0.5vw #2222224f;
+	transition: var(--duration);
+} 
 .btn-slide.active{
 	background-color: var(--blue);
 	color: #ffffff;
 	border-color: var(--blue);
 	box-shadow: 0 0.2vw 0.5vw #2222224f;
-}
-
-
-/* .btn-slide{
-	display: none;
-}
-.btn-slide.show{
-	display: block;
-}  */
-	
-.btn-slide {
-	display: none; /* Изначально скрыто */
-	opacity: 0; /* Начальная прозрачность */
-	animation: fadeIn 0.5s forwards; /* Анимация появления */
 	transition: var(--duration);
-}
+} 
 
-.btn-slide.show {
-	display: block; /* Показываем элемент */
-	transition: var(--duration);
-}
-
-/* Определяем анимацию */
-@keyframes fadeIn {
-	from {
-			opacity: 0; /* Начало анимации (полностью прозрачный) */
-			transform: translateX(-20px);
-			transition: var(--duration);
-	}
-	to {
-			opacity: 1; /* Конец анимации (полностью видимый) */
-			transform: translateX(0px);
-			transition: var(--duration);
-	}
-}
-
-
-.segment-slide{
-	display: none !important;
-}
-.segment-slide.show{
-	display: block !important;
-}
-/* ----------------- SERT ------------------------*/
-
-.serti{
-	display: flex;
-	width: 100%;
-	justify-content: space-around;
-	align-items: center;
-}
-.mini-sert img{
-	width: 10vw;
-	cursor: pointer;
-	transition: var(--duration);
-}
-.mini-sert img:hover{
-	box-shadow: var(--shad);
-	transition: var(--duration);
-	scale: 1.1;
-}
-.main-sert img{
-	height: clamp(200px, 80vh, 500px);
-	box-shadow: var(--shad);box-shadow: var(--shad);
-}
-.mini-sert{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	width: 30%;
-	gap: 2vw;
-	justify-content: end;
-}
-.serti-text{
-	width: 32%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	position: relative;
-	z-index: 99999;
-	height: 100%;
-	margin-left: 2vw;
-}
-.serti-text h2{
-	margin: clamp(14px, 6vh, 20px) 0 0 0;
-	width: 85%;
-	font-size: var(--h3);
-	line-height: clamp(10px, 0.8vh, 20px);
-	font-weight: 400;
-	color: var(--dark_blue);
-}
-.serti-text h2 span{
-	font-size: 3vh;
-	color: var(--blue);
-	font-weight: 500;
-	line-height: 2.5vh;
-	margin: clamp(14px, 6vh, 20px) 0 0 0;
-}
-.serti-text h2 span p{
-	font-size: 1.8vh;
-	color: var(--main_black);
-	line-height: 2.5vh;
-	font-weight: 400;
-}
-.serti-text a button{
-	width: 40% ;
-	background-color: var(--blue);
-	color: #ffffff;
-	padding: 0.5vw;
-}
-.serti-text a button:hover{
-	background-color: var(--dark_blue);
-}
-
-
-.text-link{
-	display: none;
-}
-.text-link.active{
-	display: block;
-}
-
-#download-link{
-	margin-bottom: 2vw;
-	margin-top: 1vw;
-}
 
 

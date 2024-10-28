@@ -1,9 +1,9 @@
 
 <div class="swiper segment-swiper">
-		<div class="swiper-wrapper">
+	<div class="swiper-wrapper">
 
 		<!-- ---------  0 ---------- -->
-		<div  class="swiper-slide segment-slide">
+		<div class="swiper-slide segment-slide">
 			<div class="text">
 				<h1>Коробка для флакона</h1>
 				<h2>Особенности разработки</h2>

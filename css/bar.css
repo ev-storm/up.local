@@ -29,7 +29,7 @@
 }
 
 .menu-bar-con ul{
-	margin-bottom:60%;
+	margin:8% 0;
 	transform: translateX(-50%);
 	transition: all 0.5s ease-in-out;
 } 
@@ -59,6 +59,7 @@
 	transform: translateX(-50%);
 	transition: all 0.5s ease-in-out; 
 	margin-bottom: 20%;
+	margin-top: 10%;
 }
 .menu-bar-con:hover .call-back {
 	transform: translateX(0);
@@ -120,7 +121,8 @@
 	font-weight: 400;
 	cursor: pointer;
 	font-size: var(--h3);
-	margin-left: 4vh;
+	margin-left: 3vh;
+	line-height: 1.8;
 }
 .under-menu.active h2{
 	transition: var(--duration);
@@ -147,17 +149,6 @@
 	animation: fadeIn 0.5s forwards;
 }
 
-@keyframes fadeIn {
-	from {
-			opacity: 0;
-			transform: translateY(-10px); /* Сдвиг вверх для эффекта */
-	}
-	to {
-			opacity: 1;
-			transform: translateY(0);
-	}
-}
-
 .menu-bar {
 	list-style-type: none;
 }
@@ -165,20 +156,20 @@
 	color: var(--dark_blue);
 	font-weight: 400;
 	cursor: pointer;
-	font-size: var(--h3);
+	font-size: 1.8vh;
 	transition: var(--duration);
 }
 .menu-bar h1:hover{
 	color: var(--blue);
 	font-weight: 400;
 	cursor: pointer;
-	font-size: var(--h3);
+	font-size: 1.8vh;
 	transition: var(--duration);
 }
 .menu-bar.active h1{
 	color: var(--blue);
 	font-weight: 400;
 	cursor: pointer;
-	font-size: var(--h3);
+	font-size: 1.8vh;
 	transition: var(--duration);
 }

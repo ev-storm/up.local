@@ -21,10 +21,10 @@
 
 	<section class="container">
 
-		<div class="swiper mySwiper">
+		<div class="swiper about-swiper">
 			<div class="swiper-wrapper">
 
-				<div class="swiper-slide slide-title">
+				<div class="swiper-slide about-slide slide-title">
 					<div class="wrapper">
 								<img class="cover"src="/assets/img/blue.png" alt="">
 								<img class="under" src="/assets/img/white.png" alt="">
@@ -50,7 +50,7 @@
 					</div>
 				</div>
 
-				<div class="swiper-slide slide-2">
+				<div class="swiper-slide about-slide slide-2">
 					<div>
 						<h3>
 							<img src="/assets/img/p1.png" alt="">
@@ -82,7 +82,39 @@
 
 				</div>
 
-				<div class="swiper-slide">
+				<div class="swiper-slide about-slide slide-2 mob">
+					<div>
+						<h3>
+							<img src="/assets/img/p1.png" alt="">
+							Юнайтед Пак способен контролировать объем производства и может вложить средства, обеспечивающие выпуск необходимого количества упаковки и комплектующих для фасовки.
+						</h3>
+						<h3>
+							<img src="/assets/img/p6.png" alt="">
+							Юнайтед Пак способен поставить упаковку и комплектующие для фасовки, отвечающей требованиям потребителей по качеству продукции, и располагает необходимыми технологическими возможностями.
+						</h3>
+						<h3>
+							<img src="/assets/img/p4.png" alt="">
+							Юнайтед Пак устанавливает приемлемую для потребителя стоимость поставляемой продукции и осуществляет поставки в заданный срок.
+						</h3>
+						<h3>
+							<img src="/assets/img/p2.png" alt="">
+							Взаимоотношения с нами исключают возникновение проблем при транспортировке продукции и предусматривают четко отлаженную связь.
+						</h3>
+
+						<h3>
+							<img src="/assets/img/p3.png" alt="">
+							Юнайтед Пак придерживается контрактных обязательств и выполняет их.
+						</h3>
+
+						<h3>
+							<img src="/assets/img/p5.png" alt="">
+							Юнайтед Пак располагает производственными мощностями высокого технологического уровня и готов внедрять технические новшества в будущем.
+						</h3>
+					</div>
+
+				</div>
+
+				<div class="swiper-slide about-slide">
 					<div class="content content-about">
 						<div class="about-title">
 								<h1>Оборудование</h1>
@@ -97,7 +129,7 @@
 					</div>
 				</div>
 
-				<div class="swiper-slide slide-ur_info">
+				<div class="swiper-slide about-slide slide-ur_info">
 					
 					<div class="ur-info">
 						
@@ -177,7 +209,7 @@
 
 				</div>
 
-				<div class="swiper-slide">
+				<div class="swiper-slide about-slide">
 
 						<div class="serti">
 							<h1>Сертификат соответствия</h1>
@@ -191,8 +223,7 @@
 						</div>
 				</div>
 
-
-				<div class="swiper-slide">
+				<div class="swiper-slide about-slide">
 					<div class="uslugi">
 						<h1>Услуги</h1>
 					</div>

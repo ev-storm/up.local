@@ -1,4 +1,6 @@
-
+.slide-2_mob{
+	display: none;
+}
 .contact{
 	width: 100%;
 	height: 87%;
@@ -38,8 +40,8 @@
 }
 .contact_title h1{
 	color: var(--blue);
-	font-size: var(--h1);
-	font-weight: 500;
+	font-size: var(--h11);
+	font-weight: 400;
 	margin-bottom: 1vh;
 	margin-top: 1vh;
 }
