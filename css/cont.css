@@ -1,5 +1,11 @@
-.slide-2_mob{
-	display: none;
+.container-cont{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	justify-content: end;
+	padding: 0 8%;
 }
 .contact{
 	width: 100%;
@@ -8,6 +14,7 @@
 	background-color: #ffffff;
 	padding: 3% 0% 3% 10%;
 	display: flex;
+	justify-content: center;
 }
 .contact_info{
 	width: 40%;
@@ -83,11 +90,12 @@
 }
 .contact_cart-title div img{
 	position: absolute;
-	margin-left: 1vw;
+	margin-left: 3vw;
+	width: 1.5vw;
 	cursor: pointer;
 }
 .contact_copy, .contact_copy-active{
-	width: 1vw;
+	width: 4vw;
 }
 .contact_cart-title div:hover .contact_copy{
 	opacity: 0;

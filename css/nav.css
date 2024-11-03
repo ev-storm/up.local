@@ -8,18 +8,21 @@ header{
 	justify-content: space-between;
 	align-items: center;
 	z-index: 9999;
+	background-color:#f3f3f3;
 }
 .logo{
 	z-index:9999 ;
 }
 
 .logo svg{
-	width: 20vh;
+	width: fit-content;
+	height: 4vh;
 }
 
 .logo svg path{
 	fill: var(--dark_blue);
 	transition: var(--duration);
+	height: 90%;
 }
 .logo svg:hover path{
 	fill: var(--blue);
@@ -52,10 +55,13 @@ header{
 	font-weight: 300;
 	font-size: var(--h2);
 }
-.menu-item.active ~.under-menu-item{
+.menu-item.active{
+	color: var(--blue);
+}
+/* .menu-item.active ~.under-menu-item{
 	width: 100%;
 	transition: var(--duration);
-}
+} */
 
 .under-menu-item{
 	display: flex;
@@ -65,9 +71,13 @@ header{
 	background-color: var(--dark_blue);
 	transition: var(--duration);
 }
-.menu div:hover .under-menu-item{
+/* .menu div:hover .under-menu-item{
 	width: 100%;
 	transition: var(--duration);
+} */
+.menu-item svg{
+	width: fit-content;
+	height: 2.5vh;
 }
 .menu-item svg path{
 	fill: var(--blue);

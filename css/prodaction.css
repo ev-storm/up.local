@@ -217,6 +217,7 @@
 	flex-direction: column;
 	width: 100%;
 	height: 70%;
+	margin: 10% 0;
 }
 .segment-slide.show{
 	display: flex !important;
@@ -224,14 +225,16 @@
 	height: 100%;
 }
 .segment-slide .text h1{
-	font-size: var(--h1);
+	font-size: var(--h11);
 	font-weight: 500;
 	color: var(--dark_blue);
+	line-height: 1.2;
+	width: 150%;
 }
 .segment-slide .text h2{
-	margin-top: 1vw;
+	margin-top: 0.5vw;
 	font-size: var(--h2);
-	font-weight: 400;
+	font-weight: 300;
 	color: var(--blue);
 }
 .segment-slide img{
@@ -276,6 +279,5 @@
 	box-shadow: 0 0.2vw 0.5vw #2222224f;
 	transition: var(--duration);
 } 
-
 
 

@@ -1,9 +1,9 @@
-@import url('header.css');
+
 @import url('font.css');
 @import url('bar.css');
 @import url('content.css');
 @import url('nav.css');
-@import url('about.css');
+
 @import url('cont.css');
 @import url('prodaction.css');
 @import url('media.css');
@@ -24,7 +24,7 @@
 	--h3: 1.5vh;
 }
 body{
-	background-color: var(--light_gray);
+	background-color: #ffffff;
 }
 
 *{
@@ -45,6 +45,18 @@ h1, h2, h3, span, a{
 	text-decoration: none;
 	line-height: 1.5;
 }
+.element::-webkit-scrollbar {
+  width: 0;
+}
+
+/*Убрать полосу прокрутки для всей страницы*/
+::-webkit-scrollbar {
+  width: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+
 
 .button{
 	font-family: "Montserrat";
@@ -62,10 +74,17 @@ h1, h2, h3, span, a{
 .button:hover{
 	background-color: var(--dark_blue);
 }
+.logo-bar{
+	display: none;
+}
 .container{
+	width: 100%;
+	height: fit-content;
 	display: flex;
-	height: 100vh;
+	flex-direction: column;
 	align-items: end;
+	justify-content: end;
+	padding: 0 8%;
 }
 .swiper {
 	width: 100%;
@@ -74,11 +93,16 @@ h1, h2, h3, span, a{
 }
 .swiper-slide {
 	display: flex;
-	justify-content: center!important;
-	align-items: center!important;
+
 	padding: 0 5%;
 	background-color: #ffffff;
 	border-radius: 0.5em;
+}
+.just-validate-error-label{
+	font-family: "Montserrat";
+	font-weight: 300;
+	color:palevioletred;
+	font-size: var(--h3);
 }
 
 .swiper-pagination-vertical.swiper-pagination-bullets,.swiper-vertical>.swiper-pagination-bullets {
@@ -101,6 +125,15 @@ h1, h2, h3, span, a{
 	justify-content: center;
 	color: var(--blue)!important;
 }
+.menu-mob{
+	display: none;
+}
+.foot-mob{
+	display: none;
+}
+.menu-contacts-mob{
+	display: none;
+}
 
 @keyframes fadeIn {
 	from {
@@ -118,10 +151,12 @@ h1, h2, h3, span, a{
 	from {
 			opacity: 0; 
 			transform: translateY(-20px); 
+			transition: var(--duration)
 	}
 	to {
 			opacity: 1; 
 			transform: translateY(0); 
+			transition: var(--duration)
 	}
 }
 @keyframes fadeInBack {
@@ -131,6 +166,10 @@ h1, h2, h3, span, a{
 	to {
 			opacity: 1; 
 	}
+}
+
+.sl-2-mob{
+	display: none!important;
 }
 
 /* @keyframes fadeIn {

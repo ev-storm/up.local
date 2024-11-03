@@ -11,15 +11,24 @@
 	backdrop-filter: blur(0px);
 	z-index: 99;
 	align-items: start;
-	justify-content: end;
+	justify-content: space-around;
 	padding: 2%;
 	transition: all 0.5s ease-out; 
 	transform: translateX(-70%);
+	z-index: 9999;
 }
 .menu-bar-con:hover{
 	transform: translateX(0);
-	background-color: #f3f3f370;
-	backdrop-filter: blur(10px);
+	background-color: #ffffff90;
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	transition: all 0.5s ease-out; 
+}
+.menu-bar-con.active{
+	transform: translateX(0);
+	background-color: #ffffff90;
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
 	transition: all 0.5s ease-out; 
 }
 
@@ -28,31 +37,9 @@
 	transition: all 0.5s ease-in-out;
 }
 
-.menu-bar-con ul{
-	margin:8% 0;
-	transform: translateX(-50%);
+.menu-bar-con-ul.active{
+	transform: translateX(0);
 	transition: all 0.5s ease-in-out;
-} 
-
-.bar-item h1{
-	color: var(--dark_blue);
-	font-size: var(--h2);
-	font-weight: 400;
-	cursor: pointer;
-}
-.bar-item{
-	transition: var(--duration);
-	margin-bottom: 2%;
-}
-
-.bar-item:hover {
-  color: var(--blue);
-	transition: var(--duration);
-}
-.bar-item.active h1{
-	color: var(--blue);
-	transition: var(--duration);
-	font-weight: 400;
 }
 
 .call-back{
@@ -65,6 +52,48 @@
 	transform: translateX(0);
 	transition: all 0.5s ease-in-out; 
 }
+.call-back.active {
+	transform: translateX(0);
+	transition: all 0.5s ease-in-out; 
+}
+
+
+
+
+.menu-bar-con ul li{
+	margin:1% 0;
+}
+
+.menu-bar-con ul{
+	margin:8% 0;
+	transform: translateX(-50%);
+	transition: all 0.5s ease-in-out;
+} 
+
+.bar-item h1{
+	color: var(--dark_blue);
+	font-size: var(--h2);
+	font-weight: 300;
+	cursor: pointer;
+	margin: 5% 0;
+}
+.bar-item h1:hover{
+  color: var(--blue);
+	transition: var(--duration);
+}
+.bar-item{
+	transition: var(--duration);
+	margin-bottom: 2%;
+}
+
+
+/* .bar-item.active h1{
+	color: var(--blue);
+	transition: var(--duration);
+	font-weight: 400;
+} */
+
+
 
 .call-back h1{
 	color: var(--dark_blue);
@@ -88,9 +117,10 @@
 	font-size: var(--h2);
 	color: var(--dark_blue);
 	width: 100%;
-	margin-bottom: 5px;
+	margin-bottom: 2%;
 	font-weight: 300;
 	padding: 2%;
+
 }
 
 .call-back form input:focus {
