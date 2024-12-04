@@ -123,6 +123,79 @@
 
 }
 
+.check{
+	font-size: var(--h3);
+	font-family: "Montserrat";
+	font-weight: 300;
+	color: var(--dark_blue);
+	cursor: pointer;
+	
+}
+.check-l{
+	font-size: var(--h3);
+	font-family: "Montserrat";
+	font-weight: 400;
+	color: var(--dark_blue);
+	cursor: pointer;
+}
+.check-l a{
+	cursor: pointer;
+	font-weight: 400;
+	color: var(--dark_blue);
+}
+.check-l a:hover{
+	cursor: pointer;
+	font-weight: 400;
+	color: var(--blue);
+	cursor: pointer;
+}
+#check{
+	height: 1.5vh;
+	width: 1vw;
+	margin: 0 1% 0 0;
+	display: flex;
+	align-items: start;
+
+}
+.check {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.check+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.check+label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #337AB7;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.check:checked+label::before {
+
+  border-color: #337AB7;
+  background-color: #337AB7;
+}
+
+.check-con{
+	display: flex;
+	padding: 1vh 0;
+}
+input[type="checkbox"]{
+  accent-color: var(--blue);
+}
+
+
 .call-back form input:focus {
 	border-width: 2px;
 	outline: none !important;
@@ -135,15 +208,61 @@
 	font-size: var(--h3);
 	padding: 2%;
 }
-.call-back form button{
+.check-btn{
 	width: 100%;
 	background-color: var(--blue);
 	font-size: var(--h3);
 	color: #ffffff;
 }
-.call-back form button:hover{
+.check-btn:hover{
 	background-color: var(--dark_blue);
 }
+
+.check-con{
+	display: flex;
+	padding: 1vh 0;
+}
+.check-con a{
+	font-family: "Montserrat", sans-serif;
+	color: var(--dark_blue);
+	font-size: var(--h3);
+}
+.c-btn{
+	font-family: "Montserrat", sans-serif;
+	color: var(--dark_blue);
+	font-size: var(--h3);
+	background-color: transparent;
+	padding: 1% 2%;
+	margin-right: 2%;
+	border-style: solid;
+
+}
+
+.privacy-con{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.privacy{
+	width: 80%;
+	padding: 10% 0;
+}
+.privacy h1{
+	font-size: var(--h11);
+	color: var(--blue);
+	width: 400;
+}
+.privacy h2{
+	font-size: var(--h1);
+	color: var(--blue);
+	width: 400;
+	margin: 5% 0 0 0;
+}
+.privacy h3{
+	font-size: var(--h2);
+	line-height: 1.8;
+}
+
 
 /* under-menu */
 .under-menu h2{

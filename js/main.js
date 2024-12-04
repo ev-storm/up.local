@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //--------------------call-back------------------------------------------------
 
 	const burger = document.querySelector('.burger');
+	
 	const burgerClose = document.querySelector('.burger-close');
 
 	const callBack = document.querySelector('.call-back');
@@ -84,6 +85,18 @@ document.addEventListener("DOMContentLoaded", function() {
 			event.stopPropagation();
 	});
 
+	const triggers = document.querySelectorAll('.trigger');
+
+	triggers.forEach(trigger => {
+			trigger.addEventListener('click', function(event) {
+					// При нажатии на кнопку, активируем классы
+					activateClasses();
+					// Остановить всплытие события
+					event.stopPropagation();
+			});
+	});
+
+	
 	// Обработчик для кликов на документ
 	document.addEventListener('click', function(event) {
 			// Проверяем, был ли клик вне зоны callBar (если так, убираем классы)
@@ -92,6 +105,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 	});
 
+
+	
 
 
 
@@ -133,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	const currentUrl = window.location.pathname;
 	
 		// Проверяем, что текущая страница - index.php
-	if (currentUrl.includes("/")) {
+	 if (currentUrl.includes("/")) {
 
 		const miniImages = document.querySelectorAll('.mini-sert img');
 		const coverSert = document.querySelector('.cover-sert');
@@ -157,8 +172,60 @@ document.addEventListener("DOMContentLoaded", function() {
 				}
 		});
 
+
+	 }
+
+
+	const checkBox = document.getElementById('check');
+	const checkBtn = document.querySelector('.check-btn');
+
+	// Функция для обновления состояния кнопки
+	function updateButtonState() {
+			if (checkBox.checked) {
+					checkBtn.disabled = false; // Разрешаем нажатие на кнопку
+					checkBtn.style.backgroundColor = '#337AB7'; // Меняем цвет на голубой
+			} else {
+					checkBtn.disabled = true; // Блокируем кнопку
+					checkBtn.style.backgroundColor = '#455360'; // Меняем цвет на серый
+			}
 	}
+
+	// Слушаем изменение состояния чекбокса
+	checkBox.addEventListener('change', updateButtonState);
+
+	// Вызываем функцию для первоначальной установки состояния кнопки
+	updateButtonState();
 
 
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+	const currentUrl = window.location.pathname;
+	
+		// Проверяем, что текущая страница - index.php
+	 if (currentUrl.includes("contact.php")) {
+
+document.getElementById('copyButton').addEventListener('click', function() {
+	// Получаем текст из элемента
+	const textToCopy = document.getElementById('textToCopy').innerText;
+
+	// Создаем временный элемент input для копирования текста
+	const tempInput = document.createElement('input');
+	tempInput.value = textToCopy;
+	document.body.appendChild(tempInput);
+
+	// Выделяем текст в элементе input
+	tempInput.select();
+	tempInput.setSelectionRange(0, 99999); // Для мобильных устройств
+
+	// Копируем выделенный текст в буфер обмена
+	document.execCommand('copy');
+
+	// Удаляем временный элемент input
+	document.body.removeChild(tempInput);
+
+	// Уведомляем пользователя о копировании
+	//alert('Текст скопирован: ' + textToCopy);
+});
+}
+});

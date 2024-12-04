@@ -4,7 +4,7 @@ header{
 	top: 0;
 	width: 100%;
 	height: fit-content;
-	padding: 1% 5%;
+	padding: 0.5% 5%;
 	justify-content: space-between;
 	align-items: center;
 	z-index: 9999;
@@ -54,6 +54,7 @@ header{
 	color: var(--dark_blue);
 	font-weight: 300;
 	font-size: var(--h2);
+	cursor: pointer;
 }
 .menu-item.active{
 	color: var(--blue);
@@ -78,10 +79,12 @@ header{
 .menu-item svg{
 	width: fit-content;
 	height: 2.5vh;
+	cursor: pointer;
 }
 .menu-item svg path{
 	fill: var(--blue);
 	transition: var(--duration);
+	cursor: pointer;
 }
 .menu-item svg:hover path{
 	fill: var(--dark_blue);
@@ -98,6 +101,7 @@ footer{
 	padding: 0 2%;
 	z-index: 999;
 	height: 4%;
+	background-color: var(--light_gray);
 }
 footer h2{
 	color: var(--gray);
@@ -109,9 +113,11 @@ footer h2 span{
 }
 .burger{
 	display: none;
+	width: 0.1px;
 }
 .burger-close{
 	display: none;
+	width: 0.1px;
 }
 
 

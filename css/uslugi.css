@@ -1,0 +1,80 @@
+.container-usl{
+	padding: 5% 0;
+	width: 100%;
+}
+.uslugi_con{
+	display: flex;
+	flex-direction: column;
+	height: fit-content;
+	align-items: stretch;
+	justify-content: center;
+	padding: 4% 15%;
+}
+.uslugi_con h1{
+	font-size: 4vh;
+	color: var(--blue);
+	margin-bottom: 2vh;
+	font-weight: 400;
+}
+.uslugi_con div{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.uslugi_grey{
+	background-color: #f3f3f3;
+}
+
+
+.uslugi_card {
+	display: flex;
+	width: 39%;
+	margin-bottom: 5vh;
+	padding: 4vh 5vh;
+	transition: all 0.3s ease-in;
+	border-radius: 1em;
+}
+.uslugi_card:hover {
+	box-shadow: 0 0 3vh #00000020;
+	transition: all 0.3s ease-in;
+}
+/* .card_grey:hover {
+	background-color: #ffffff;
+	transition: all 0.3s ease-in;
+} */
+
+.uslugi_card div{
+	display: flex;
+	flex-direction: column;
+	width: 35vh;
+	justify-content: center;
+}
+.uslugi_card div h2{
+	font-size: var(--h1);
+	color: var(--dark_blue);
+	font-weight: 400;
+}
+.uslugi_card div h3{
+	font-size: 2vh;
+	color: var(--dark_blue);
+	font-weight: 300;
+}
+.uslugi_card img{
+	display: none;
+	width: 20vh;
+	margin-right: 2vh;
+}
+.uslugi_btn{
+	font-family: "Montserrat";
+	font-weight: 400;
+	font-size: var(--h1);
+	color: var(--blue);
+	background-color: transparent;
+	border: solid 2px;
+	border-radius: 0.4em;
+	border-color: var(--blue);
+	padding: 0.7vh 2.5vh;
+	transition: var(--duration);
+	cursor: pointer;
+	margin-top: 4vh;
+}

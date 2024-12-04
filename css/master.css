@@ -5,8 +5,10 @@
 @import url('nav.css');
 
 @import url('cont.css');
-@import url('prodaction.css');
+/* @import url('prodaction.css'); */
+@import url('prodaction-mini.css'); 
 @import url('media.css');
+@import url('uslugi.css');
 
 
 
@@ -69,7 +71,6 @@ html {
 	padding: 0.7vh 2.5vh;
 	transition: var(--duration);
 	cursor: pointer;
-	letter-spacing: 0.5px;
 }
 .button:hover{
 	background-color: var(--dark_blue);
@@ -78,6 +79,15 @@ html {
 	display: none;
 }
 .container{
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	justify-content: end;
+	padding: 0 8%;
+}
+.container-prod{
 	width: 100%;
 	height: fit-content;
 	display: flex;

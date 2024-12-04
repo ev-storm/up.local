@@ -12,7 +12,7 @@
 
 
 
-	<section class=" container-cont">
+	<section class="container-cont">
 
 
 			<div class="contact">
@@ -21,36 +21,56 @@
 						<h1>Контакты</h1>
 					</div>
 
-					<div class="contact_item">
-						<img src="/assets/icons/phone_2.svg" alt="">
-							<div class="contact_item-text">
-								<div>
-									<h3><span>Прямой</span><br>
-											+7 931-287 40 65 <br>
-											495-960 33 70
-									</h3>
-									<h3><span>Менеджер</span><br>
-											+7 903-960 33 70
-									</h3>
-								</div>
+					<div class="contact_item-text-phone">
+
+						<div>
+							<div>
+								<img src="/assets/icons/phone_2.svg" alt="">
 							</div>
-					</div>
-					
-					<div class="contact_item">
-						<img src="/assets/icons/mail_2.svg" alt="">
-							<div class="contact_item-text">
-								<h2>E-mail</h2>
+							<div>
+								<h2>Телефон</h2>
 								<h3>
-									focuzprint@yandex.ru<br>
-									7842751@list.ru
+										+7 903 960 33 70 <br>
+										+8 495 960 33 70<br>	
+										+7 931 287 40 65
 								</h3>
 							</div>
+						</div>
+
+						<div>
+							<div>
+							<img src="/assets/icons/mail_2.svg" alt="">
+							</div>
+							<div>
+								<h2>E-mail</h2>
+								<h3>
+								zakaz@up-ps.ru<br>
+								direktor@up-ps.ru<br>
+								kommdir@up-ps.ru 
+								</h3>
+							</div>
+						</div>
+
+
+
+						<!-- <img src="/assets/icons/mail_2.svg" alt="">
+						<div>
+							<h2>E-mail</h2>
+							<h3>
+								zakaz@up-ps.ru<br>
+								zakaz@up-ps.ru<br>
+								zakaz@up-ps.ru	
+							</h3>
+						</div> -->
+
 					</div>
+					
+
 
 					<div class="contact_item">
 						<img src="/assets/icons/loc.svg" alt="">
 							<div class="contact_item-text">
-								<h2>Адрес</h2>
+								<h2>Адрес</h2><br>
 								<h3>
 								Московская область, Мытищи<br>
 								ул. Фабричная, стр. 17Б/2
@@ -60,14 +80,14 @@
 
 					<div class="contact_cart-con">
 						<div class="contact_cart-title">
-							<h1>ООО "ЮНАЙТЕД-ПАК"</h1>
+							<h1>ООО «Юнаитед Пак»</h1>
 							<div>
-								<img class="contact_copy" src="/assets/icons/copy.svg" alt="">
+								<img id="copyButton" class="contact_copy" src="/assets/icons/copy.svg" alt="">
 								<img class="contact_copy-active" src="/assets/icons/copy-active.svg" alt="">
 							</div>
 						</div>
 						<div class="contact_cart">
-								<h2>
+								<h2 id="textToCopy">
 									ИНН/КПП: <span>7806601095/780601001</span><br>
 									ОГРН: <span> 1227800099482</span><br>
 									Расчётный счет: <span>40702810610001142654</span><br>

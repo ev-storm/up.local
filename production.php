@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <title>Производство</title>
-
+<script defer src="/js/prod-mini.js"></script>
 
 
 <body>
 	<?php include "components/head.php"?>
 	<?php include "components/nav.php"?>
+	<?php include "components/bar.php"?>
 	<img class="call-back-img" src="/assets/icons/call-back.svg" alt="">
 
-	<nav class="menu-bar-con">
+	<!-- <nav class="menu-bar-con">
 		
 
 			<ul class="menu-bar-con-ul">
@@ -248,150 +249,201 @@
 
 
 
-	</nav>
+	</nav> -->
 
 
 
 
 
 
-	<section class="container">
+	<section class="container-prod">
 		<div class="content_con">
 		<div class="content">
 			<!-------------------НАВИГАЦИЯ ----------------------->
-			<div class="navigation">
+			<!-- <div class="navigation">
 			<p class="text-page"> Производство </p> 
 			<p class="text-page"> / </p> 
 			<p class="text-categories-nav"> Картонная коробка </p> 
 			<p class="text-page"> / </p> 
-			<p class="text-segment-nav"> Стомотология</p>
+			<p class="text-segment-nav"> Стоматология</p>
 			<p class="text-page"> / </p> 
 			<p class="text-podsegment"> Картонные футляры-пеналы для зубной пасты </p>
-			</div>
+			</div> -->
 
 			<!------------------- КНОПКИ КАТЕГОРИЙ ----------------------->
 			<div class="categories-con">
-				<div class="categories button i-cor active" value="Картонная коробка">
+				<div class="categories button i-cor active" id='cor-main' value="Картонная коробка">
 					Картонная коробка
 				</div>
-				<div class="categories button i-instr" value="Инструкция-вкладыш">
+				<div class="categories button i-instr" id='instr-main' value="Инструкция-вкладыш">
 					Инструкция-вкладыш
 				</div>
-				<div class="categories button i-et" value="Этикетка">
+				<div class="categories button i-et" d='et-main' value="Этикетка">
 					Этикетка
 				</div>
-				<div class="categories button i-tub" value="Туба">
+				<div class="categories button i-ban" id='ban-main' value="Банка-флакон">
+					Банка-флакон
+				</div>
+				<div class="categories button i-tub" id='tub-main' value="Туба">
 					Туба
 				</div>
-				<div class="categories button i-ban" value="Банка">
-					Банка
-				</div>
+				
 			</div>
+
+
+
+
+			<!------------------- СЕГМЕНТ-КОНТЕЙНЕР ----------------------->
+			<div class="segment-btn_con">
+					<!------------------- СЕГМЕНТ-БАТОН-БАД ----------------------->
+				<div class="segment-btn">
+					<div class="segment-cover">
+						<h2 class="segment-title" >БАД</h2>
+						<h2 class="segment-title-dark" >БАД</h2>
+					</div>
+					<div class="segment  active low i-bad" value="БАД">
+						<img src="/assets/icons/bad.svg" alt="">
+					</div>
+				</div>
+				
+				<!------------------- СЕГМЕНТ-БАТОН Косметика и парфюмерия----------------------->
+				<div class="segment-btn">
+					<div class="segment-cover">
+						<h2 class="segment-title">Косметика и парфюмерия</h2>
+						<h2 class="segment-title-dark">Косметика и парфюмерия</h2>
+						
+					</div>
+					<div class="segment i-cosm " value="Косметика и парфюмерия" >
+						<img src="/assets/icons/cosm.svg" alt="">
+					</div>
+				</div>
+				<!------------------- СЕГМЕНТ-БАТОН фармацевтика----------------------->
+				<div class="segment-btn">
+					<div class="segment-cover">
+						<h2 class="segment-title">Фармацевтика</h2>
+						<h2 class="segment-title-dark">Фармацевтика</h2>
+					</div>
+					<div class="segment low i-farma " value="Фармацевтика">
+						<img src="/assets/icons/farma.svg" alt="">
+					</div>
+				</div>
+				<!------------------- СЕГМЕНТ-БАТОН Стоматология----------------------->
+				<div class="segment-btn">
+					<div class="segment-cover">
+						<h2 class="segment-title">Стоматология</h2>
+						<h2 class="segment-title-dark">Стоматология</h2>
+					</div>
+					<div class="segment  low i-dent" value="Стоматология">
+						<img src="/assets/icons/dent.svg" alt="">
+					</div>
+				</div>
+				<!------------------- СЕГМЕНТ-БАТОН Витамины----------------------->
+				<div class="segment-btn">
+					<div class="segment-cover">
+						<h2 class="segment-title">Витамины</h2>
+						<h2 class="segment-title-dark">Витамины</h2>
+					</div>
+					<div class="segment low i-vit" value="Витамины">
+						<img src="/assets/icons/vit.svg" alt="">
+					</div>
+				</div>
+				<!------------------- СЕГМЕНТ-БАТОН Продукты питания----------------------->
+				<div class="segment-btn">
+					<div class="segment-cover">
+						<h2 class="segment-title">Продукты питания</h2>
+						<h2 class="segment-title-dark">Продукты питания</h2>
+					</div>
+					<div class="segment i-prod" value="Продукты питания">
+						<img src="/assets/icons/prod.svg" alt="">
+					</div>
+				</div>
+				<!------------------- СЕГМЕНТ-БАТОН Кондитерские изделия----------------------->
+				<div class="segment-btn">
+					<div class="segment-cover">
+						<h2 class="segment-title">Кондитерские изделия</h2>
+						<h2 class="segment-title-dark">Кондитерские изделия</h2>
+					</div>
+					<div class="segment i-conditer" value="Кондитерские изделия">
+						<img src="/assets/icons/cond.svg" alt="">
+					</div>
+				</div>
+				<!------------------- СЕГМЕНТ-БАТОН Замороженные продукты----------------------->
+				<div class="segment-btn i-zamoroz">
+					<div class="segment-cover">
+						<h2 class="segment-title">Замороженные продукты</h2>
+						<h2 class="segment-title-dark">Замороженные продукты</h2>
+					</div>
+					<div class="segment " value="Замороженные продукты" >
+						<img src="/assets/icons/froz.svg" alt="">
+					</div>
+				</div>
+				<!------------------- СЕГМЕНТ-БАТОН Промышленный----------------------->
+				<div class="segment-btn">
+					<div class="segment-cover">
+						<h2 class="segment-title">Промышленный</h2>
+						<h2 class="segment-title-dark">Промышленный</h2>
+					</div>
+					<div class="segment low i-prom" value="Промышленный">
+						<img src="/assets/icons/prom.svg" alt="">
+					</div>
+				</div>
+
+			</div>
+
 			<!------------------- КОНТЕЙНЕР-СЛАЙДЫ ----------------------->
 			<div class="main-content">
 				<!------------------- СЛАЙДЫ ----------------------->
 				<div class="main-content_podsegment">
-					<?php include "components/podsegment.php"?>
+					<div class="img-con">
+						<img class="img-segment" src="/assets/img/bad-slide.png" alt="">
+					</div>
+					<div class="main-content_text">
+						<h1 class="text-categories move">Картонная коробка</h1>
+						<h2 class="text-segment move">БАД</h2>
+						<p class="p-segment move">
+							Применение картонной коробки в области Биоактивных добавок. Детали призводства
+						</p>
+						<div class="btn-segment_con">
+							<h3 class="btn-segment bs-1">
+							Коробка для флакона
+							</h3>
+							<h3 class="btn-segment bs-2 " >
+							Коробка для банки
+							</h3>
+							<h3 class="btn-segment bs-3">
+							Пачка для капсул
+							</h3>
+							<h3 class="btn-segment bs-4">
+							Шоу-бокс из картона
+							</h3>
+							<h3 class="btn-segment bs-5">
+								
+							</h3>
+							<h3 class="btn-segment bs-6">
+								
+							</h3>
+							<h3 class="btn-segment bs-7">
+								
+							</h3>
+						</div>
+						<?php include "components/buttons-slide.php"?>
+
+
+						<button class="button trigger">заказать</button>
+					</div>
+				
+				</div>
+				
 				</div>
 				<!------------------- ТЕКСТ-СЛАЙДЫ ----------------------->
-				<div class="main-content_text">
-					<h1 class="text-categories move">Картонная коробка</h1>
-					<h2 class="text-segment move">Стоматология</h2>
-					<p class="text-description move">
-						Картонная коробка витамины
-					</p>
-					<!------------------- БАТОНСЫ-СЛАЙДЫ ----------------------->
-					<?php include "components/buttons-slide.php"?>
-				</div>
+				
 
 			</div>
 
-			<!------------------- СЕГМЕНТ-КОНТЕЙНЕР ----------------------->
-			<div class="segment-btn_con">
-				<!------------------- СЕГМЕНТ-БАТОН-БАД ----------------------->
-				<div class="segment-btn">
-					<div class="segment-cover">
-						<h2 >БАД</h2>
-					</div>
-					<div class="segment low i-bad" value="БАД">
-						<img src="/assets/icons/bad.svg" alt="">
-					</div>
-				</div>
-				<!------------------- СЕГМЕНТ-БАТОН Косметика и парфюмерия----------------------->
-				<div class="segment-btn">
-				<div class="segment-cover">
-					<h2>Косметика и парфюмерия</h2> 	
-				</div>
-				<div class="segment i-cosm active" value="Косметика и парфюмерия" >
-					<img src="/assets/icons/cosm.svg" alt="">
-				</div>
-			</div>
-			<!------------------- СЕГМЕНТ-БАТОН фармацевтика----------------------->
-			<div class="segment-btn">
-				<div class="segment-cover">
-					<h2>Фармацевтика</h2>
-				</div>
-				<div class="segment low i-farma " value="Фармацевтика">
-					<img src="/assets/icons/farma.svg" alt="">
-				</div>
-			</div>
-			<!------------------- СЕГМЕНТ-БАТОН Стоматология----------------------->
-			<div class="segment-btn">
-				<div class="segment-cover">
-					<h2>Стоматология</h2>
-				</div>
-				<div class="segment low i-dent " value="Стоматология">
-					<img src="/assets/icons/dent.svg" alt="">
-				</div>
-			</div>
-			<!------------------- СЕГМЕНТ-БАТОН Витамины----------------------->
-			<div class="segment-btn">
-				<div class="segment-cover">
-					<h2>Витамины</h2>
-				</div>
-				<div class="segment low i-vit" value="Витамины">
-					<img src="/assets/icons/vit.svg" alt="">
-				</div>
-			</div>
-			<!------------------- СЕГМЕНТ-БАТОН Продукты питания----------------------->
-			<div class="segment-btn">
-				<div class="segment-cover">
-					<h2>Продукты питания</h2>
-				</div>
-				<div class="segment i-prod" value="Продукты питания">
-					<img src="/assets/icons/prod.svg" alt="">
-				</div>
-			</div>
-			<!------------------- СЕГМЕНТ-БАТОН Кондитерские изделия----------------------->
-			<div class="segment-btn">
-				<div class="segment-cover">
-					<h2>Кондитерские изделия</h2>
-				</div>
-				<div class="segment i-conditer" value="Кондитерские изделия">
-					<img src="/assets/icons/cond.svg" alt="">
-				</div>
-			</div>
-			<!------------------- СЕГМЕНТ-БАТОН Замороженные продукты----------------------->
-			<div class="segment-btn">
-				<div class="segment-cover">
-					<h2>Замороженные продукты</h2>
-				</div>
-				<div class="segment i-zamoroz" value="Замороженные продукты" >
-					<img src="/assets/icons/froz.svg" alt="">
-				</div>
-			</div>
-			<!------------------- СЕГМЕНТ-БАТОН Промышленный----------------------->
-			<div class="segment-btn">
-				<div class="segment-cover">
-					<h2>Промышленный</h2>
-				</div>
-				<div class="segment low i-prom" value="Промышленный">
-					<img src="/assets/icons/prom.svg" alt="">
-				</div>
-			</div>
+		
 
-		</div>
 	</div>
+
 </section>
 
 
